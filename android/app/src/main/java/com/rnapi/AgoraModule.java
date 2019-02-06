@@ -730,7 +730,7 @@ public class AgoraModule extends ReactContextBaseJavaModule {
                 map.putString("url", url);
                 map.putInt("error", error);
                 mReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                        .emit("onStreamPublished", map);
+                        .emit("StreamPublished", map);
             }
 
             @Override
@@ -738,7 +738,7 @@ public class AgoraModule extends ReactContextBaseJavaModule {
                 WritableMap map = Arguments.createMap();
                 map.putString("url", url);
                 mReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                        .emit("onStreamUnpublished", map);
+                        .emit("StreamUnpublished", map);
             }
 
             @Override
